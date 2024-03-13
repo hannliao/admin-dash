@@ -1,0 +1,147 @@
+:root {
+    --tan: rgb(166, 138, 98);
+    --green: rgb(78, 96, 54);
+    --blue: rgb(180, 204, 217);
+    --beige: rgb(233, 226, 216);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 80px 1fr;
+    min-height: 100vh;
+    background-color: var(--beige);
+}
+
+.dashboard div {
+    font-family: "Helvetica", sans-serif;
+    font-size: 18px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    text-align: center;
+    background-color: white;
+}
+
+.header ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.header div{
+    display: grid;
+}
+
+.header ul,
+.header div {
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.propic img {
+    width: 50px;
+    height: auto;
+    border: 2px solid var(--tan);
+    border-radius: 50%;
+}
+
+.sidebar {
+    grid-row: 1 / 3;
+    background-color: var(--green);
+    color: white;
+}
+
+.sidebar ul {
+    display: grid;
+    padding: 30px;
+}
+
+.sidebar li {
+    padding: 30px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 3fr 400px;
+    grid-auto-rows: 600px;
+    margin: 30px;
+    gap: 30px;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: 44px;
+    grid-auto-rows: 400px;
+    gap: 10px;
+}
+
+.projects h3 {
+    grid-column: 1 / -1;
+}
+
+.card,
+.announcements,
+.trending {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.card {
+    display: grid;
+}
+
+.card h5 {
+    grid-column: 1 / 3;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.card img {
+    height: 320px;
+}
+
+.card p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-left: 20px;
+    color: rgb(115, 115, 115);
+}
+
+.announcements,
+.trending {
+    padding: 40px;
+}
+
+.announcements p {
+    color: rgb(115, 115, 115);
+    font-size: 16px;
+}
+
+.announcements *,
+.trending * {
+    margin-bottom: 20px;
+}
+
+.right-sidebar {
+    grid-column: 2;
+}
